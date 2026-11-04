@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.data/
+.wrangler/
+.dev.vars
+.DS_Store
+artifacts/
+*.tar.gz
+assets/imgs/
+assets/generated/

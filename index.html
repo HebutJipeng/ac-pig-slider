@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf8f3">
+  <meta name="description" content="往左，嚣张重生；居中，元气可爱；往右，哼唧变猪。拖动滑杆，发现 AC 娘的 31 级小情绪。">
+  <title>滑动变猪器 — AC娘的31级小情绪</title>
+  <link rel="icon" type="image/svg+xml" href="./public/favicon.svg">
+  <link rel="stylesheet" href="./src/styles.css">
+  <link rel="preload" href="./public/portraits/original.webp" as="image">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="滑动变猪器首页"><span class="brand-mark">AC<span>!</span></span><span>AC 娘小剧场<small>JUST FOR FUN</small></span></a>
+    <a class="header-link" href="https://www.acfun.cn/" target="_blank" rel="noopener noreferrer">快乐，才是正经事 <span aria-hidden="true">↗</span></a>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow"><span></span> A LITTLE SLIDE, A LOT OF FUN</p>
+      <h1 id="page-title">滑动<span class="title-pig">变猪<svg viewBox="0 0 150 16" aria-hidden="true"><path d="M3 10Q70 1 146 8M17 14Q86 6 133 12"/></svg></span>器<span class="title-dot">.</span></h1>
+      <p class="intro-copy">左边嘴硬，中间可爱，右边<span>哼唧。</span></p>
+    </section>
+    <section class="playground" aria-label="AC娘形态控制台">
+      <div class="portrait-area">
+        <div class="portrait-topline"><span class="live-dot"></span><span>AC 娘 · 情绪观测中</span><span class="edition">NO. 001 / AC LAB</span></div>
+        <div class="portrait-frame" id="portrait-frame">
+          <img class="poster" id="poster" src="./public/portraits/original.webp" alt="元气可爱的AC娘">
+          <canvas id="portrait" width="1000" height="1000" role="img" aria-label="元气 AC 娘" hidden></canvas>
+          <span class="frame-label" id="frame-label">原装可爱 · 甜度刚好</span>
+          <span class="frame-count" id="frame-count">16 <i>/ 31</i></span>
+          <div class="media-error" id="media-error" role="alert" hidden>画面加载遇到了问题。<button id="retry" type="button">再试一次 ↻</button></div>
+        </div>
+        <div class="portrait-bottom"><span id="portrait-caption">今天的 AC 娘，也有一点不一样。</span><button class="text-button" id="download" type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M5 16v5h14v-5"/></svg>保存这一刻</button></div>
+      </div>
+      <div class="controls">
+        <div class="control-heading"><span class="section-kicker">AC娘形态校准</span><span class="level-label">LEVEL <b id="level-value">00</b></span></div>
+        <div class="stage-readout" aria-live="polite"><h2 id="stage-name">元气 AC 娘</h2><p id="stage-line">今天，也要和你一起开开心心！</p></div>
+        <div class="slider-section">
+          <div class="slider-endpoints"><span>← 嚣张重生</span><span>软萌小猪 →</span></div>
+          <div class="range-shell"><div class="tick-track" id="ticks" aria-hidden="true"></div><span id="community-marker" class="community-marker" hidden title="社区平均"></span><input id="level" type="range" min="-15" max="15" step="0.01" value="0" disabled aria-label="AC娘形态：向左重生，向右变猪" aria-valuetext="元气 AC 娘，强度 0"></div>
+          <div class="scale-numbers"><span>−15</span><span>0</span><span>+15</span></div>
+          <p class="slider-hint"><span aria-hidden="true">✧</span> 拖动一下，看看本娘的另一面</p>
+        </div>
+        <div class="anchor-buttons" aria-label="快速选择形态">
+          <button data-level="-15" type="button"><span aria-hidden="true">♛</span>嚣张重生<small>蕉气冲天</small></button>
+          <button data-level="0" type="button" class="is-active" aria-pressed="true"><span aria-hidden="true">✦</span>元气可爱<small>原装 AC 娘</small></button>
+          <button data-level="15" type="button"><span class="pig-icon" aria-hidden="true">● ●</span>软萌小猪<small>哼唧一下</small></button>
+        </div>
+        <div class="play-actions"><button id="play" class="play-button" type="button" disabled><span id="play-icon" aria-hidden="true">▷</span><span id="play-label">看她变一遍</span></button><button id="reset" class="reset-button" type="button" aria-label="回到元气AC娘">↺ <span>回到原点</span></button></div>
+        <div class="community-box"><div class="community-box-top"><span><span class="connection-dot" id="connection-dot"></span> 大家眼里的 AC 娘</span><span id="community-total">连接中</span></div><p id="community-copy">正在看看大家的选择…</p><button id="vote" class="vote-button" type="button" disabled>就投这一票 <span aria-hidden="true">↗</span></button><p id="vote-feedback" class="vote-feedback" role="status"></p></div>
+      </div>
+    </section>
+    <section class="underneath"><div class="little-note"><span class="note-star" aria-hidden="true">✳</span><p>没有什么是一根滑杆解决不了的。<small>如果有，就再滑一下。</small></p></div><button id="share" class="share-button" type="button">分享此刻的 AC 娘 <span aria-hidden="true">↗</span></button></section>
+    <section class="timeline-section" aria-labelledby="timeline-title"><div class="timeline-heading"><h2 id="timeline-title">今天，也在一起变化<span>COMMUNITY DIARY</span></h2><span id="timeline-note">社区每日记忆</span></div><div id="timeline" class="timeline"><p class="timeline-empty">社区连接后，这里会留下每天的 AC 娘。</p></div><button id="exit-history" class="text-button" type="button" hidden>← 返回我的选择</button></section>
+    <details class="about"><summary>关于这个小玩具 <span>+</span></summary><div><p>拖动滑杆自由预览 31 级形态，点击「就投这一票」才会提交。每个浏览器保留一张票，每 3 小时可修改一次。灰色小点表示社区平均位置。</p><p>画面采用确认的三种形态和新增过渡关键帧，在相邻画面间连续过渡。角色是 AC 娘；本项目为趣味二创，非 AcFun 官方产品。</p><p>灵感来自 <a href="https://github.com/Lichtspektrum/liang-intensity-calibrator" target="_blank" rel="noopener noreferrer">滑动变祖器 ↗</a>。请尊重角色与素材相关权利。</p></div></details>
+  </main>
+  <footer class="site-footer"><a class="footer-brand" href="./">AC<span>!</span></a><span>认真你就输了。可爱就赢了。</span><span class="footer-right">MADE FOR ACERS <span aria-hidden="true">♡</span></span></footer>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
