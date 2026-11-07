@@ -1,0 +1,4 @@
+Rive Canvas runtime @rive-app/canvas 2.49.4
+Source: https://github.com/rive-app/rive-wasm
+Package: https://www.npmjs.com/package/@rive-app/canvas/v/2.49.4
+Licensed under the MIT License. See LICENSE.

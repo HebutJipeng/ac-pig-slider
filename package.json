@@ -10,7 +10,7 @@
     "build": "node scripts/build.mjs",
     "build:site": "node scripts/build-site.mjs",
     "test": "node scripts/build-site.mjs && node --test tests/*.test.mjs",
-    "check": "node --check src/main.js && node --check server/api.mjs && node --check server/dev.mjs",
+    "check": "node --check src/main.js && node --check src/rive-character.js && node --check server/api.mjs && node --check server/dev.mjs",
     "dev:worker": "npx wrangler dev",
     "deploy:worker": "npx wrangler deploy"
   }

@@ -11,7 +11,7 @@ let secret = process.env.VOTER_HASH_SECRET;
 if (!secret) { try { secret = await readFile(secretFile, 'utf8'); } catch (error) { if (error.code !== 'ENOENT') throw error; secret = randomBytes(32).toString('hex'); await writeFile(secretFile, secret, { mode: 0o600 }); } }
 const DB = openDatabase(resolve(root, '.data/votes.sqlite'));
 const port = Number(process.env.PORT || 5173);
-const mime = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.webp': 'image/webp', '.png': 'image/png', '.svg': 'image/svg+xml', '.json': 'application/json' };
+const mime = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.webp': 'image/webp', '.png': 'image/png', '.svg': 'image/svg+xml', '.json': 'application/json', '.wasm': 'application/wasm', '.m4a': 'audio/mp4', '.riv': 'application/octet-stream' };
 const server = createServer(async (incoming, outgoing) => {
  try {
   const origin = `http://127.0.0.1:${port}`;
@@ -32,7 +32,7 @@ const server = createServer(async (incoming, outgoing) => {
   try { relative = decodeURIComponent(url.pathname).replace(/^\/+/, ''); } catch { outgoing.writeHead(400); outgoing.end(); return; }
   if (!relative) relative = 'index.html';
   // Serve only the frontend and its public assets, never local data or source credentials.
-  if (!(relative === 'index.html' || /^(src\/(main\.js|domain\.js|styles\.css)|public\/[a-zA-Z0-9_./-]+)$/.test(relative))) { outgoing.writeHead(404); outgoing.end('Not found'); return; }
+  if (!(relative === 'index.html' || /^(src\/(main\.js|domain\.js|rive-character\.js|styles\.css)|public\/[a-zA-Z0-9_./-]+)$/.test(relative))) { outgoing.writeHead(404); outgoing.end('Not found'); return; }
   const path = resolve(root, relative);
   if (!path.startsWith(root + sep) || relative.split('/').some(part => part === '..' || part.startsWith('.'))) { outgoing.writeHead(403); outgoing.end(); return; }
   try { const data = await readFile(path); outgoing.writeHead(200, { 'Content-Type': mime[extname(path)] || 'application/octet-stream', 'X-Content-Type-Options': 'nosniff', 'Cache-Control': 'no-cache' }); outgoing.end(incoming.method === 'HEAD' ? undefined : data); }

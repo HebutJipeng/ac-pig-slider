@@ -46,7 +46,9 @@ npm run build:site # 生成含同源 API 的 Sites Worker 部署包
 - `-15 … +15` 共 31 个整数等级，拖动预览精度 0.01；鼠标、触摸、键盘均可操作。
 - 7 张关键帧：确认的三种主形态 + 4 张生成的中间形态。Canvas 在相邻关键帧间连续交叉淡化。
 - 三个主形态快捷按钮、往返自动演示、暂停、回到原点。
-- 导出带阶段名称的 1080 × 1230 PNG，分享当前等级链接（`?level=15`）。
+- 嘴硬台词随形态变化：从「本娘重生归来」到「这只是鼻部装饰」，再到「哼唧」。
+- 点击「你是不是猪？」触发短暂掉马，1.8 秒后恢复当前选择；切换滑杆可立即中止，彩蛋不会提交或改变投票。
+- 预览并保存 1080 × 1550 PNG「今日猪况证明」，包含角色图片、北京时间日期、猪化程度、精神状态和趣味评语；分享当前等级链接（`?level=15`）。
 - 显式投票按钮；拖动不提交。每个浏览器一张票，每三小时可改一次，服务器负责校验。
 - 社区平均位置、累计与今日人数、每日快照与历史回看。
 - 未连接后端时仍可预览和导出，社区区显示未连接；不伪造人数。
@@ -54,7 +56,7 @@ npm run build:site # 生成含同源 API 的 Sites Worker 部署包
 
 ### 画面方式与限制
 
-`public/portraits/` 包含 `reborn / minus10 / minus5 / original / plus5 / plus10 / pig.webp`。三种主形态从确认的 `assets/generated/ac-slider-three-anchors-v7.png` 裁出；新增关键帧由内置 imagegen 生成，提示词在本地 `assets/generated/*.prompt.txt`。
+当前使用 `public/portraits/` 下的 `reborn.webp`、`minus10-v2.webp`、`minus5-v2.webp`、`original.webp`、`plus5-v2.webp`、`plus10-v2.webp`、`pig.webp`。三种主形态从确认的 `assets/generated/ac-slider-three-anchors-v7.png` 裁出，保持不变；四张 v2 过渡帧以主形态为编辑底图，由内置 imagegen 优化角色轮廓、背景和服装递进。旧版过渡帧保留，方便对比和回退，完整提示词在本地 `assets/generated/*-v2.prompt.txt`。
 
 **31 级表示滑杆等级，并非 31 张独立绘制原画。** 目前采用 7 张关键帧交叉淡化，不是 RIFE 光流插帧；过渡中可能有轻微叠影。无需运行时 AI、视频解码、付费 API 或加载大模型。原始参考图与生成草稿保留本地，不上传源代码仓库。
 
@@ -117,3 +119,15 @@ Wrangler 使用独立数据库，与 Sites D1、开发机 SQLite 互不共享。
 ## 致谢与素材
 
 灵感来自 [Lichtspektrum/liang-intensity-calibrator](https://github.com/Lichtspektrum/liang-intensity-calibrator)。本项目重新实现了页面与服务逻辑，没有直接复制该项目的源码或人物素材。AC 娘及相关标识属于各自权利方；生成图片为用户提供参考后的趣味二创，素材授权不由代码许可替代。本项目不是 AcFun 官方产品。
+
+### 嘴硬答辩现场
+
+点击「请解释一下」，AC 娘会按当前形态答辩；小猪态会在否认后漏出「哼唧」，追问时改口「那是椅子响」。可关闭声音看字幕，或停止答辩。换形态、回看历史、切到后台会中止表演，不会提交投票。完成后可保存嘴硬鉴定书。
+
+答辩时切换到真正的 Rive 原画分层角色，使用已确认的重生、可爱与小猪三张插画作为底图，保留头发、眼睛和服装质感，通过局部修补与独立嘴部图层实现眨眼、说话嘴型和轻微脸红。静止时直接显示原图嘴部，说话时使用按原画重新生成的闭嘴、小张口、张口与哼唧嘴型；可爱态大张口及小猪闭嘴继续使用原图像素。使用固定中文音频，在浏览器中解码实际 M4A，按同一 AudioBuffer 的每 20ms 音量数据驱动 Rive 嘴型，并以音频输出时钟补偿设备延迟；这是声音驱动的口部动画，不是逐音素识别。关闭声音仍可看同步动画。原来的滑杆保留 7 关键帧交叉淡化和三张已确认的插画。
+
+Rive 源文件位于 `rive/ac-mascot/scene.rml`，图层素材与生成提示词见 `rive/ac-mascot/ARTWORK.md`，通过官方 CLI 1.9.1 制作；导出文件是 `public/rive/ac-mascot.riv`。当前为官方免费导出，带 Rive 启动画面。可在安装 CLI 并登录后运行 `rive rive/ac-mascot --publish=local`，再将导出复制到 `public/rive/`。运行时为本地托管的 `@rive-app/canvas` 2.49.4，许可证在 `public/vendor/rive/LICENSE`，无需向第三方发送访问者台词或录音。
+
+配音使用本机 Tingting 中文合成声音生成，文件索引在 `public/rive/speech.json`，嘴型时间轴由浏览器解码后实时建立；不是角色声优配音。角色只在点击答辩后加载，失败时明确提示，原图片滑杆仍可使用。
+
+嚣张重生答辩使用独立的 `reborn` Rive 图层（−15 至小于 −7.5），不会切换成中间可爱态。配有独立原画、闭眼修补与露齿坏笑嘴型，沿用「谁说我是猪？站出来。本娘允许你重新组织语言。」音频。

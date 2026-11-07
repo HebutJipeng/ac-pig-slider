@@ -1,8 +1,12 @@
 import { readFile, writeFile, mkdir, readdir, rm } from 'node:fs/promises';
 import { resolve, extname } from 'node:path';
 const root = resolve(import.meta.dirname, '..');
-const mime = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.webp': 'image/webp', '.svg': 'image/svg+xml' };
-const files = ['index.html', 'src/main.js', 'src/domain.js', 'src/styles.css', 'public/favicon.svg', ...(await readdir(resolve(root,'public/portraits'))).map(name=>'public/portraits/'+name)];
+const mime = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.webp': 'image/webp', '.svg': 'image/svg+xml', '.json': 'application/json', '.wasm': 'application/wasm', '.m4a': 'audio/mp4', '.riv': 'application/octet-stream', '.txt': 'text/plain; charset=utf-8' };
+async function publicFiles(dir) {
+ const entries = await readdir(resolve(root, dir), { withFileTypes: true });
+ return (await Promise.all(entries.map(entry => entry.isDirectory() ? publicFiles(`${dir}/${entry.name}`) : `${dir}/${entry.name}`))).flat();
+}
+const files = ['index.html', 'src/main.js', 'src/domain.js', 'src/rive-character.js', 'src/styles.css', ...await publicFiles('public')];
 const assets = {};
 for(const file of files) assets['/'+file] = { type: mime[extname(file)], data: (await readFile(resolve(root,file))).toString('base64') };
 const domain = (await readFile(resolve(root,'src/domain.js'),'utf8')).replace(/^export /gm,'');

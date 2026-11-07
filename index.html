@@ -27,15 +27,17 @@
         <div class="portrait-frame" id="portrait-frame">
           <img class="poster" id="poster" src="./public/portraits/original.webp" alt="元气可爱的AC娘">
           <canvas id="portrait" width="1000" height="1000" role="img" aria-label="元气 AC 娘" hidden></canvas>
+          <canvas id="rive-portrait" width="1000" height="1000" role="img" aria-label="会说话的 AC 娘 Rive 动画角色" hidden></canvas>
           <span class="frame-label" id="frame-label">原装可爱 · 甜度刚好</span>
           <span class="frame-count" id="frame-count">16 <i>/ 31</i></span>
+          <span class="reaction-bubble" id="reaction-bubble" role="status" hidden>哼唧！被发现了。</span>
           <div class="media-error" id="media-error" role="alert" hidden>画面加载遇到了问题。<button id="retry" type="button">再试一次 ↻</button></div>
         </div>
-        <div class="portrait-bottom"><span id="portrait-caption">今天的 AC 娘，也有一点不一样。</span><button class="text-button" id="download" type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M5 16v5h14v-5"/></svg>保存这一刻</button></div>
+        <div class="portrait-bottom"><span id="portrait-caption">今天的 AC 娘，也有一点不一样。</span><button class="text-button" id="download" type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M5 16v5h14v-5"/></svg>生成猪况证明</button></div>
       </div>
       <div class="controls">
         <div class="control-heading"><span class="section-kicker">AC娘形态校准</span><span class="level-label">LEVEL <b id="level-value">00</b></span></div>
-        <div class="stage-readout" aria-live="polite"><h2 id="stage-name">元气 AC 娘</h2><p id="stage-line">今天，也要和你一起开开心心！</p></div>
+        <div class="stage-readout" aria-live="polite"><h2 id="stage-name">元气 AC 娘</h2><p id="stage-line">本娘天下第一可爱！</p></div>
         <div class="slider-section">
           <div class="slider-endpoints"><span>← 嚣张重生</span><span>软萌小猪 →</span></div>
           <div class="range-shell"><div class="tick-track" id="ticks" aria-hidden="true"></div><span id="community-marker" class="community-marker" hidden title="社区平均"></span><input id="level" type="range" min="-15" max="15" step="0.01" value="0" disabled aria-label="AC娘形态：向左重生，向右变猪" aria-valuetext="元气 AC 娘，强度 0"></div>
@@ -47,6 +49,14 @@
           <button data-level="0" type="button" class="is-active" aria-pressed="true"><span aria-hidden="true">✦</span>元气可爱<small>原装 AC 娘</small></button>
           <button data-level="15" type="button"><span class="pig-icon" aria-hidden="true">● ●</span>软萌小猪<small>哼唧一下</small></button>
         </div>
+        <div class="meme-panel"><span><small>嘴硬观察日记</small>鼻子可以变，嘴不能软。</span><button id="reveal" type="button" disabled>你是不是猪？ <span aria-hidden="true">↗</span></button></div>
+        <section class="defense-panel" aria-labelledby="defense-title">
+          <div class="defense-heading"><h3 id="defense-title">嘴硬答辩现场</h3><span id="defense-status">尚未开庭</span></div>
+          <p id="defense-caption" role="status" aria-live="polite">形态可以变，口供不能改。</p>
+          <progress id="defense-progress" value="0" max="1" aria-label="当前台词播放进度" hidden></progress>
+          <div class="defense-actions"><button id="defend" type="button" disabled>请解释一下 ↗</button><button id="defense-stop" type="button" hidden>停止答辩</button><button id="defense-card" type="button" hidden>保存口供 ↓</button></div>
+          <label class="voice-toggle"><input id="defense-voice" type="checkbox" checked> 有声答辩 <small id="voice-note">固定中文配音 · Rive 嘴部动画</small></label>
+        </section>
         <div class="play-actions"><button id="play" class="play-button" type="button" disabled><span id="play-icon" aria-hidden="true">▷</span><span id="play-label">看她变一遍</span></button><button id="reset" class="reset-button" type="button" aria-label="回到元气AC娘">↺ <span>回到原点</span></button></div>
         <div class="community-box"><div class="community-box-top"><span><span class="connection-dot" id="connection-dot"></span> 大家眼里的 AC 娘</span><span id="community-total">连接中</span></div><p id="community-copy">正在看看大家的选择…</p><button id="vote" class="vote-button" type="button" disabled>就投这一票 <span aria-hidden="true">↗</span></button><p id="vote-feedback" class="vote-feedback" role="status"></p></div>
       </div>
@@ -57,6 +67,7 @@
   </main>
   <footer class="site-footer"><a class="footer-brand" href="./">AC<span>!</span></a><span>认真你就输了。可爱就赢了。</span><span class="footer-right">MADE FOR ACERS <span aria-hidden="true">♡</span></span></footer>
   <div id="toast" class="toast" role="status" hidden></div>
+  <dialog id="receipt-dialog" class="receipt-dialog" aria-labelledby="receipt-title"><div class="receipt-shell"><div class="receipt-heading"><div><small>AC 娘小剧场 · 趣味鉴定</small><h2 id="receipt-title">今日猪况证明</h2></div><button id="receipt-close" type="button" aria-label="关闭猪况证明">×</button></div><img id="receipt-preview" alt="当前形态的今日猪况证明，含角色图片、猪化程度、精神状态与鉴定意见"><p>本证明仅供哼唧，不作为社区投票凭据。</p><button id="receipt-save" type="button">保存这张证明 ↓</button></div></dialog>
   <script type="module" src="./src/main.js"></script>
 </body>
 </html>

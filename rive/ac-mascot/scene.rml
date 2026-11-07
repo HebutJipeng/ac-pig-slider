@@ -1,0 +1,366 @@
+<Rive version="1" kind="fragment">
+  <Artboard name="AC娘" id="0:2" width="500" height="500" styleId="0:3" defaultStateMachineId="0:4" viewModelId="0:500" viewModelInstanceId="0:501">
+    <LayoutComponentStyle id="0:3" />
+    <Node name="Arrogant reborn" id="0:30001" opacity="0">
+      <Node name="mouthRound" id="0:30002" opacity="0">
+        <DataBindContext sourcePathIds="0:500-0:512" propertyKey="18" />
+        <ClippingShape sourceId="0:30004" />
+        <Image name="Reborn regenerated mouthRound" id="0:30003" assetId="0:14003" x="212.5" y="220.83333333333334" scaleX="0.16666666666666666" scaleY="0.16666666666666666" />
+      </Node>
+      <Shape name="mouthRound crop" id="0:30004" x="267" y="275">
+        <Rectangle width="84" height="64" />
+      </Shape>
+      <Node name="mouthFull" id="0:30005" opacity="0">
+        <DataBindContext sourcePathIds="0:500-0:511" propertyKey="18" />
+        <ClippingShape sourceId="0:30007" />
+        <Image name="Original mouth pixels" id="0:30006" assetId="0:14001" x="250" y="250" scaleX="0.7062146892655368" scaleY="0.7062146892655368" />
+      </Node>
+      <Shape name="mouthFull crop" id="0:30007" x="267" y="275">
+        <Rectangle width="84" height="64" />
+      </Shape>
+      <Node name="mouthSmall" id="0:30008" opacity="0">
+        <DataBindContext sourcePathIds="0:500-0:510" propertyKey="18" />
+        <ClippingShape sourceId="0:30010" />
+        <Image name="Reborn regenerated mouthSmall" id="0:30009" assetId="0:14003" x="212.25" y="318.3333333333333" scaleX="0.16666666666666666" scaleY="0.16666666666666666" />
+      </Node>
+      <Shape name="mouthSmall crop" id="0:30010" x="267" y="275">
+        <Rectangle width="84" height="64" />
+      </Shape>
+      <Node name="mouthClosed" id="0:30011" opacity="0">
+        <DataBindContext sourcePathIds="0:500-0:509" propertyKey="18" />
+        <ClippingShape sourceId="0:30013" />
+        <Image name="Reborn regenerated mouthClosed" id="0:30012" assetId="0:14003" x="315.1666666666667" y="318.75" scaleX="0.16666666666666666" scaleY="0.16666666666666666" />
+      </Node>
+      <Shape name="mouthClosed crop" id="0:30013" x="267" y="275">
+        <Rectangle width="84" height="64" />
+      </Shape>
+      <DataBindContext sourcePathIds="0:500-0:513" propertyKey="18" />
+      <Node name="Caught blush" id="0:30014" opacity="0">
+        <DataBindContext sourcePathIds="0:500-0:506" propertyKey="18" />
+        <Shape name="Extra blush right" id="0:30015" x="316" y="255" opacity=".16">
+          <Ellipse width="30" height="8" />
+          <Fill>
+            <SolidColor colorValue="FFF5B3B3" />
+          </Fill>
+        </Shape>
+        <Shape name="Extra blush left" id="0:30016" x="205" y="259" opacity=".16">
+          <Ellipse width="30" height="8" />
+          <Fill>
+            <SolidColor colorValue="FFF5B3B3" />
+          </Fill>
+        </Shape>
+      </Node>
+      <Node name="Right eye" id="0:30017" opacity="0">
+        <ClippingShape sourceId="0:30019" />
+        <Image name="Right eye texture" id="0:30018" assetId="0:14002" x="250" y="250" scaleX="0.39872408293460926" scaleY="0.39872408293460926" />
+      </Node>
+      <Shape name="Right eye mask" id="0:30019" x="307" y="233">
+        <Ellipse width="90" height="52" />
+      </Shape>
+      <Node name="Left eye" id="0:30020" opacity="0">
+        <ClippingShape sourceId="0:30022" />
+        <Image name="Left eye texture" id="0:30021" assetId="0:14002" x="250" y="250" scaleX="0.39872408293460926" scaleY="0.39872408293460926" />
+      </Node>
+      <Shape name="Left eye mask" id="0:30022" x="210" y="242">
+        <Ellipse width="90" height="53" />
+      </Shape>
+      <Node name="Mouth skin repair" id="0:30023" opacity="0">
+        <ClippingShape sourceId="0:30025" />
+        <Image name="Mouth skin repair texture" id="0:30024" assetId="0:14002" x="250" y="250" scaleX="0.39872408293460926" scaleY="0.39872408293460926" />
+        <DataBindContext sourcePathIds="0:500-0:508" propertyKey="18" />
+      </Node>
+      <Shape name="Mouth skin repair mask" id="0:30025" x="267" y="275">
+        <Ellipse width="84" height="62" />
+      </Shape>
+      <Image name="Approved original illustration" id="0:30026" assetId="0:14001" x="250" y="250" scaleX="0.7062146892655368" scaleY="0.7062146892655368" />
+    </Node>
+    <Node name="Playback ready signal" id="0:1041" x="0">
+      <DataBindContext sourcePathIds="0:500-0:507" propertyKey="13" direction="true" />
+    </Node>
+    <Node name="Pig costume" id="0:1021" opacity="0">
+      <Node name="mouthRound" id="0:20023" opacity="0">
+        <DataBindContext sourcePathIds="0:500-0:512" propertyKey="18" />
+        <ClippingShape sourceId="0:20022" />
+        <Image name="pig regenerated mouthRound" id="0:20024" assetId="0:13002" x="217.45391705069125" y="223.1336405529954" scaleX="0.18433179723502305" scaleY="0.18433179723502305" />
+      </Node>
+      <Shape name="mouthRound crop" id="0:20022" x="267.5" y="280">
+        <Rectangle width="60" height="28" />
+      </Shape>
+      <Node name="mouthFull" id="0:20020" opacity="0">
+        <DataBindContext sourcePathIds="0:500-0:511" propertyKey="18" />
+        <ClippingShape sourceId="0:20019" />
+        <Image name="pig regenerated mouthFull" id="0:20021" assetId="0:13002" x="318.0990783410138" y="223.04147465437788" scaleX="0.18433179723502305" scaleY="0.18433179723502305" />
+      </Node>
+      <Shape name="mouthFull crop" id="0:20019" x="267.5" y="280">
+        <Rectangle width="60" height="28" />
+      </Shape>
+      <Node name="mouthSmall" id="0:20017" opacity="0">
+        <DataBindContext sourcePathIds="0:500-0:510" propertyKey="18" />
+        <ClippingShape sourceId="0:20016" />
+        <Image name="pig regenerated mouthSmall" id="0:20018" assetId="0:13002" x="216.71658986175115" y="326.08294930875576" scaleX="0.18433179723502305" scaleY="0.18433179723502305" />
+      </Node>
+      <Shape name="mouthSmall crop" id="0:20016" x="267.5" y="280">
+        <Rectangle width="60" height="28" />
+      </Shape>
+      <Node name="mouthClosed" id="0:20014" opacity="0">
+        <DataBindContext sourcePathIds="0:500-0:509" propertyKey="18" />
+        <ClippingShape sourceId="0:20013" />
+        <Image name="Original mouth pixels" id="0:20015" assetId="0:10003" x="250" y="250" scaleX="0.7062146892655368" scaleY="0.7062146892655368" />
+      </Node>
+      <Shape name="mouthClosed crop" id="0:20013" x="267.5" y="280">
+        <Rectangle width="60" height="28" />
+      </Shape>
+      <DataBindContext sourcePathIds="0:500-0:502" propertyKey="18" />
+      <Node name="Caught blush" id="0:1038" opacity="0">
+        <DataBindContext sourcePathIds="0:500-0:506" propertyKey="18" />
+        <Shape name="Extra blush right" id="0:1040" x="316" y="250" opacity=".16">
+          <Ellipse width="30" height="8" />
+          <Fill>
+            <SolidColor colorValue="FFF5B3B3" />
+          </Fill>
+        </Shape>
+        <Shape name="Extra blush left" id="0:1039" x="201" y="255" opacity=".16">
+          <Ellipse width="30" height="8" />
+          <Fill>
+            <SolidColor colorValue="FFF5B3B3" />
+          </Fill>
+        </Shape>
+      </Node>
+      <Node name="Right eye" id="0:1030" opacity="0">
+        <ClippingShape sourceId="0:1029" />
+        <Image name="Right eye texture" id="0:1031" assetId="0:10004" x="250" y="250" scaleX="0.39872408293460926" scaleY="0.39872408293460926" />
+      </Node>
+      <Shape name="Right eye mask" id="0:1029" x="316" y="205">
+        <Ellipse width="99" height="65" />
+      </Shape>
+      <Node name="Left eye" id="0:1027" opacity="0">
+        <ClippingShape sourceId="0:1026" />
+        <Image name="Left eye texture" id="0:1028" assetId="0:10004" x="250" y="250" scaleX="0.39872408293460926" scaleY="0.39872408293460926" />
+      </Node>
+      <Shape name="Left eye mask" id="0:1026" x="204" y="217">
+        <Ellipse width="98" height="62" />
+      </Shape>
+      <Node name="Mouth skin repair" id="0:1024" opacity="0">
+        <ClippingShape sourceId="0:1023" />
+        <Image name="Mouth skin repair texture" id="0:1025" assetId="0:10004" x="250" y="250" scaleX="0.39872408293460926" scaleY="0.39872408293460926" />
+        <DataBindContext sourcePathIds="0:500-0:508" propertyKey="18" />
+      </Node>
+      <Shape name="Mouth skin repair mask" id="0:1023" x="268" y="283">
+        <Rectangle width="69" height="29" cornerRadiusTL="14.5" cornerRadiusTR="14.5" cornerRadiusBL="14.5" cornerRadiusBR="14.5" />
+      </Shape>
+      <Image name="Approved original illustration" id="0:1022" assetId="0:10003" x="250" y="250" scaleX="0.7062146892655368" scaleY="0.7062146892655368" />
+    </Node>
+    <Node name="Original illustration" id="0:1001" opacity="1">
+      <Node name="mouthRound" id="0:20011" opacity="0">
+        <DataBindContext sourcePathIds="0:500-0:512" propertyKey="18" />
+        <ClippingShape sourceId="0:20010" />
+        <Image name="cute regenerated mouthRound" id="0:20012" assetId="0:13001" x="206.4551282051282" y="220.53418803418805" scaleX="0.20085470085470086" scaleY="0.20085470085470086" />
+      </Node>
+      <Shape name="mouthRound crop" id="0:20010" x="264" y="283">
+        <Rectangle width="70" height="58" />
+      </Shape>
+      <Node name="mouthFull" id="0:20008" opacity="0">
+        <DataBindContext sourcePathIds="0:500-0:511" propertyKey="18" />
+        <ClippingShape sourceId="0:20007" />
+        <Image name="Original mouth pixels" id="0:20009" assetId="0:10001" x="250" y="250" scaleX="0.7062146892655368" scaleY="0.7062146892655368" />
+      </Node>
+      <Shape name="mouthFull crop" id="0:20007" x="264" y="283">
+        <Rectangle width="70" height="58" />
+      </Shape>
+      <Node name="mouthSmall" id="0:20005" opacity="0">
+        <DataBindContext sourcePathIds="0:500-0:510" propertyKey="18" />
+        <ClippingShape sourceId="0:20004" />
+        <Image name="cute regenerated mouthSmall" id="0:20006" assetId="0:13001" x="205.35042735042734" y="335.62393162393164" scaleX="0.20085470085470086" scaleY="0.20085470085470086" />
+      </Node>
+      <Shape name="mouthSmall crop" id="0:20004" x="264" y="283">
+        <Rectangle width="70" height="58" />
+      </Shape>
+      <Node name="mouthClosed" id="0:20002" opacity="0">
+        <DataBindContext sourcePathIds="0:500-0:509" propertyKey="18" />
+        <ClippingShape sourceId="0:20001" />
+        <Image name="cute regenerated mouthClosed" id="0:20003" assetId="0:13001" x="321.04273504273505" y="336.7286324786325" scaleX="0.20085470085470086" scaleY="0.20085470085470086" />
+      </Node>
+      <Shape name="mouthClosed crop" id="0:20001" x="264" y="283">
+        <Rectangle width="70" height="58" />
+      </Shape>
+      <DataBindContext sourcePathIds="0:500-0:503" propertyKey="18" />
+      <Node name="Caught blush" id="0:1018" opacity="0">
+        <DataBindContext sourcePathIds="0:500-0:506" propertyKey="18" />
+        <Shape name="Extra blush right" id="0:1020" x="316" y="255" opacity=".16">
+          <Ellipse width="30" height="8" />
+          <Fill>
+            <SolidColor colorValue="FFF5B3B3" />
+          </Fill>
+        </Shape>
+        <Shape name="Extra blush left" id="0:1019" x="205" y="259" opacity=".16">
+          <Ellipse width="30" height="8" />
+          <Fill>
+            <SolidColor colorValue="FFF5B3B3" />
+          </Fill>
+        </Shape>
+      </Node>
+      <Node name="Right eye" id="0:1010" opacity="0">
+        <ClippingShape sourceId="0:1009" />
+        <Image name="Right eye texture" id="0:1011" assetId="0:10002" x="250" y="250" scaleX="0.39872408293460926" scaleY="0.39872408293460926" />
+      </Node>
+      <Shape name="Right eye mask" id="0:1009" x="314" y="210">
+        <Ellipse width="91" height="80" />
+      </Shape>
+      <Node name="Left eye" id="0:1007" opacity="0">
+        <ClippingShape sourceId="0:1006" />
+        <Image name="Left eye texture" id="0:1008" assetId="0:10002" x="250" y="250" scaleX="0.39872408293460926" scaleY="0.39872408293460926" />
+      </Node>
+      <Shape name="Left eye mask" id="0:1006" x="207" y="216">
+        <Ellipse width="94" height="81" />
+      </Shape>
+      <Node name="Mouth skin repair" id="0:1004" opacity="0">
+        <ClippingShape sourceId="0:1003" />
+        <Image name="Mouth skin repair texture" id="0:1005" assetId="0:10002" x="250" y="250" scaleX="0.39872408293460926" scaleY="0.39872408293460926" />
+        <DataBindContext sourcePathIds="0:500-0:508" propertyKey="18" />
+      </Node>
+      <Shape name="Mouth skin repair mask" id="0:1003" x="264" y="286">
+        <Ellipse width="72" height="59" />
+      </Shape>
+      <Image name="Approved original illustration" id="0:1002" assetId="0:10001" x="250" y="250" scaleX="0.7062146892655368" scaleY="0.7062146892655368" />
+    </Node>
+    <StateMachine name="Character" id="0:4">
+      <StateMachineLayer name="Face performance">
+        <EntryState x="0" y="0">
+          <StateTransition stateToId="0:6" />
+        </EntryState>
+        <AnyState x="0" y="130" />
+        <ExitState x="400" y="0" />
+        <AnimationState id="0:6" animationId="0:5" x="200" y="0" />
+      </StateMachineLayer>
+    </StateMachine>
+    <LinearAnimation name="Idle" id="0:5" duration="240" loopValue="loop">
+      <KeyedObject objectId="0:1007">
+        <KeyedProperty propertyKey="18">
+          <KeyFrameDouble value="0" frame="0" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="70" interpolationType="linear" />
+          <KeyFrameDouble value="0.5" frame="74" interpolationType="linear" />
+          <KeyFrameDouble value="1" frame="77" interpolationType="linear" />
+          <KeyFrameDouble value="0.5" frame="80" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="84" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="188" interpolationType="linear" />
+          <KeyFrameDouble value="1" frame="192" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="197" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="240" interpolationType="linear" />
+        </KeyedProperty>
+      </KeyedObject>
+      <KeyedObject objectId="0:1010">
+        <KeyedProperty propertyKey="18">
+          <KeyFrameDouble value="0" frame="0" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="70" interpolationType="linear" />
+          <KeyFrameDouble value="0.5" frame="74" interpolationType="linear" />
+          <KeyFrameDouble value="1" frame="77" interpolationType="linear" />
+          <KeyFrameDouble value="0.5" frame="80" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="84" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="188" interpolationType="linear" />
+          <KeyFrameDouble value="1" frame="192" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="197" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="240" interpolationType="linear" />
+        </KeyedProperty>
+      </KeyedObject>
+      <KeyedObject objectId="0:1027">
+        <KeyedProperty propertyKey="18">
+          <KeyFrameDouble value="0" frame="0" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="70" interpolationType="linear" />
+          <KeyFrameDouble value="0.5" frame="74" interpolationType="linear" />
+          <KeyFrameDouble value="1" frame="77" interpolationType="linear" />
+          <KeyFrameDouble value="0.5" frame="80" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="84" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="188" interpolationType="linear" />
+          <KeyFrameDouble value="1" frame="192" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="197" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="240" interpolationType="linear" />
+        </KeyedProperty>
+      </KeyedObject>
+      <KeyedObject objectId="0:1030">
+        <KeyedProperty propertyKey="18">
+          <KeyFrameDouble value="0" frame="0" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="70" interpolationType="linear" />
+          <KeyFrameDouble value="0.5" frame="74" interpolationType="linear" />
+          <KeyFrameDouble value="1" frame="77" interpolationType="linear" />
+          <KeyFrameDouble value="0.5" frame="80" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="84" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="188" interpolationType="linear" />
+          <KeyFrameDouble value="1" frame="192" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="197" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="240" interpolationType="linear" />
+        </KeyedProperty>
+      </KeyedObject>
+      <KeyedObject objectId="0:1041">
+        <KeyedProperty propertyKey="13">
+          <KeyFrameDouble value="1" frame="0" interpolationType="linear" />
+          <KeyFrameDouble value="1" frame="240" interpolationType="linear" />
+        </KeyedProperty>
+      </KeyedObject>
+      <KeyedObject objectId="0:30020">
+        <KeyedProperty propertyKey="18">
+          <KeyFrameDouble value="0" frame="0" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="70" interpolationType="linear" />
+          <KeyFrameDouble value="0.5" frame="74" interpolationType="linear" />
+          <KeyFrameDouble value="1" frame="77" interpolationType="linear" />
+          <KeyFrameDouble value="0.5" frame="80" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="84" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="188" interpolationType="linear" />
+          <KeyFrameDouble value="1" frame="192" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="197" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="240" interpolationType="linear" />
+        </KeyedProperty>
+      </KeyedObject>
+      <KeyedObject objectId="0:30017">
+        <KeyedProperty propertyKey="18">
+          <KeyFrameDouble value="0" frame="0" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="70" interpolationType="linear" />
+          <KeyFrameDouble value="0.5" frame="74" interpolationType="linear" />
+          <KeyFrameDouble value="1" frame="77" interpolationType="linear" />
+          <KeyFrameDouble value="0.5" frame="80" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="84" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="188" interpolationType="linear" />
+          <KeyFrameDouble value="1" frame="192" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="197" interpolationType="linear" />
+          <KeyFrameDouble value="0" frame="240" interpolationType="linear" />
+        </KeyedProperty>
+      </KeyedObject>
+    </LinearAnimation>
+  </Artboard>
+  <ViewModel name="AcCharacter" id="0:500" defaultInstanceId="0:501">
+    <ViewModelPropertyNumber name="pig" id="0:502" />
+    <ViewModelPropertyNumber name="human" id="0:503" />
+    <ViewModelPropertyNumber name="mouthOpen" id="0:504" />
+    <ViewModelPropertyNumber name="mouthWide" id="0:505" />
+    <ViewModelPropertyNumber name="embarrassed" id="0:506" />
+    <ViewModelInstance name="Default" id="0:501" exports="true">
+      <ViewModelInstanceNumber propertyValue="0" viewModelPropertyId="0:502" />
+      <ViewModelInstanceNumber propertyValue="1" viewModelPropertyId="0:503" />
+      <ViewModelInstanceNumber propertyValue="0.08" viewModelPropertyId="0:504" />
+      <ViewModelInstanceNumber propertyValue="1" viewModelPropertyId="0:505" />
+      <ViewModelInstanceNumber propertyValue="0" viewModelPropertyId="0:506" />
+      <ViewModelInstanceNumber propertyValue="0" viewModelPropertyId="0:507" />
+      <ViewModelInstanceNumber propertyValue="0" viewModelPropertyId="0:508" />
+      <ViewModelInstanceNumber propertyValue="0" viewModelPropertyId="0:509" />
+      <ViewModelInstanceNumber propertyValue="0" viewModelPropertyId="0:510" />
+      <ViewModelInstanceNumber propertyValue="0" viewModelPropertyId="0:511" />
+      <ViewModelInstanceNumber propertyValue="0" viewModelPropertyId="0:512" />
+      <ViewModelInstanceNumber propertyValue="0" viewModelPropertyId="0:513" />
+    </ViewModelInstance>
+    <ViewModelPropertyNumber name="ready" id="0:507" />
+    <ViewModelPropertyNumber name="talking" id="0:508" />
+    <ViewModelPropertyNumber name="mouthClosed" id="0:509" />
+    <ViewModelPropertyNumber name="mouthSmall" id="0:510" />
+    <ViewModelPropertyNumber name="mouthFull" id="0:511" />
+    <ViewModelPropertyNumber name="mouthRound" id="0:512" />
+    <ViewModelPropertyNumber name="reborn" id="0:513" />
+  </ViewModel>
+  <ImageAsset name="Cute original" id="0:10001" file="../../public/portraits/original.webp" />
+  <ImageAsset name="Cute face repair" id="0:10002" file="assets/cute-neutral-v2.webp" />
+  <ImageAsset name="Pig original" id="0:10003" file="../../public/portraits/pig.webp" />
+  <ImageAsset name="Pig face repair" id="0:10004" file="assets/pig-neutral-v2.webp" />
+  <ImageAsset name="Cute regenerated mouth sheet" id="0:13001" file="assets/cute-mouths-v3.webp" />
+  <ImageAsset name="Pig regenerated mouth sheet" id="0:13002" file="assets/pig-mouths-v3.webp" />
+  <ImageAsset name="Reborn approved original" id="0:14001" file="../../public/portraits/reborn.webp" />
+  <ImageAsset name="Reborn face repair" id="0:14002" file="assets/reborn-neutral-v4.webp" />
+  <ImageAsset name="Reborn mouth sprites" id="0:14003" file="assets/reborn-mouths-v4.webp" />
+</Rive>
